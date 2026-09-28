@@ -1,18 +1,53 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router'
+import { useFonts } from 'expo-font'
+import { StatusBar } from 'expo-status-bar'
+import { useEffect } from 'react'
+import { ActivityIndicator, View } from 'react-native'
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { configureAudio } from '@/audio/player'
+import '../global.css'
 
-SplashScreen.preventAutoHideAsync();
+export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    GoogleSans: require('../../assets/fonts/GoogleSans-VariableFont_GRAD,opsz,wght.ttf'),
+  })
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  useEffect(() => {
+    configureAudio()
+  }, [])
+
+  if (!fontsLoaded) {
+    return (
+      <View className="flex-1 items-center justify-center bg-white">
+        <ActivityIndicator color="#1DB954" />
+      </View>
+    )
+  }
+
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
-  );
+    <>
+      <StatusBar style="dark" />
+
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: {
+            backgroundColor: '#FFFFFF',
+          },
+          animation: 'fade',
+        }}
+      >
+        <Stack.Screen name="index" />
+
+        <Stack.Screen
+          name="player"
+          options={{
+            presentation: 'modal',
+            animation: 'slide_from_bottom',
+            gestureEnabled: true,
+          }}
+        />
+      </Stack>
+    </>
+  )
 }

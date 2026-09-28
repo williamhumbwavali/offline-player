@@ -1,56 +1,106 @@
-# Welcome to your Expo app 👋
+# OPlayer
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> Um player de música offline, simples, privado e feito para ouvir a tua própria biblioteca.
 
-## Get started
+OPlayer é um player de música para dispositivos móveis focado em uma experiência de reprodução **local e offline**.
 
-1. Install dependencies
+Sem streaming. Sem contas. Sem anúncios. Apenas a tua música.
 
-   ```bash
-   npm install
-   ```
+## Sobre
 
-2. Start the app
+O OPlayer foi criado com uma ideia simples: oferecer uma experiência moderna para reproduzir músicas armazenadas localmente no dispositivo.
 
-   ```bash
-   npx expo start
-   ```
+A interface combina uma estética minimalista com controles rápidos para tornar a navegação pela biblioteca e a reprodução das faixas simples e agradável.
 
-In the output, you'll find options to open the app in a
+## Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* 🎵 Importação de músicas do dispositivo
+* 📚 Biblioteca de músicas locais
+* 🔎 Pesquisa por música, artista e álbum
+* ▶️ Play / Pause
+* ⏮️ Faixa anterior
+* ⏭️ Próxima faixa
+* 🔀 Reprodução aleatória
+* 🔁 Repetição
+* ⏱️ Barra de progresso e seek
+* 🗑️ Remoção de músicas da biblioteca
+* 💾 Persistência da biblioteca
+* 📱 Interface otimizada para mobile
+* 🌑 Design minimalista inspirado em players modernos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Stack
 
-## Get a fresh project
+* **React Native**
+* **Expo**
+* **Expo Router**
+* **TypeScript**
+* **NativeWind**
+* **Zustand**
+* **Ionicons**
 
-When you're ready, run:
+## Filosofia
 
-```bash
-npm run reset-project
+O OPlayer não tenta ser mais um serviço de streaming.
+
+Ele é pensado para quem já possui as próprias músicas e quer uma experiência de reprodução moderna sem depender de uma conexão com a internet.
+
+**Local-first. Private by design.**
+
+## Estrutura
+
+```text
+OPlayer/
+├── app/
+│   ├── index.tsx
+│   └── player.tsx
+│
+├── audio/
+│   └── usePlayer.ts
+│
+├── components/
+│   ├── MiniPlayer.tsx
+│   ├── TrackList.tsx
+│   └── ...
+│
+├── store/
+│   └── player.ts
+│
+├── types/
+│   └── music.ts
+│
+└── ...
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Desenvolvimento
 
-### Other setup steps
+Instala as dependências:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm install
+```
 
-## Learn more
+Inicia o projeto:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Depois abre no dispositivo ou simulador através do Expo.
 
-## Join the community
+## Estado do projeto
 
-Join our community of developers creating universal apps.
+OPlayer está atualmente em desenvolvimento e já possui o núcleo da experiência de reprodução e gerenciamento da biblioteca funcionando.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Novas funcionalidades podem ser adicionadas conforme o projeto evolui.
+
+## Autor
+
+**William Humbwavali**
+
+Software Developer 
+
+---
+
+### OPlayer
+
+**Your music. Your device. Your player.**
