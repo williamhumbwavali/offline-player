@@ -2,9 +2,16 @@
 
 > Um player de música offline, simples, privado e feito para ouvir a tua própria biblioteca.
 
-OPlayer é um player de música para dispositivos móveis focado em uma experiência de reprodução **local e offline**.
+OPlayer é um player de música para dispositivos móveis focado em uma experiência **local e offline**.
 
-Sem streaming. Sem contas. Sem anúncios. Apenas a tua música.
+**Sem streaming. Sem contas. Sem anúncios. Apenas a tua música.**
+
+## Screenshots
+
+<p align="center">
+  <img src="./screen-1.jpeg" width="280" alt="OPlayer - Biblioteca de músicas" />
+  <img src="./screen-2.jpeg" width="280" alt="OPlayer - Player de música" />
+</p>
 
 ## Sobre
 
@@ -85,21 +92,13 @@ Inicia o projeto:
 npx expo start
 ```
 
-Depois abre no dispositivo ou simulador através do Expo.
+Depois abre o projeto no dispositivo ou simulador através do Expo.
 
 ## Estado do projeto
 
 OPlayer está atualmente em desenvolvimento e já possui o núcleo da experiência de reprodução e gerenciamento da biblioteca funcionando.
 
 Novas funcionalidades podem ser adicionadas conforme o projeto evolui.
-
-## Autor
-
-**William Humbwavali**
-
-Software Developer 
-
----
 
 ### OPlayer
 
